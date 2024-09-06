@@ -40,6 +40,6 @@ class ImageEditor:
         
 image_1 = ImageEditor("C:\\Users\\billy\\OneDrive\\Documents\\Python Scripts\\crosseyedkitten.jpg")
 image_1.rotate(180).save_changes("edited")
-#image_1.add_text(100, 100, "MeOW!", "purple").save_changes("_meow")
+image_1.add_text(100, 100, "MeOW!", "purple").save_changes("_meow")
 
 

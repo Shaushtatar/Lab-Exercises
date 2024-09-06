@@ -26,4 +26,4 @@ wordofchoice = input("Choose a word you want to translate:")
 print(translator(wordofchoice))
 #Sources Used: https://www.geeksforgeeks.org/python-program-convert-string-list/
 #https://www.w3schools.com/python/python_ref_list.asp
-#https://www.w3schools.com/python/python_ref_string.asp
+#https://docs.python.org/3/tutorial/introduction.html#strings
