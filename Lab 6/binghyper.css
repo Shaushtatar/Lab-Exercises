@@ -1,0 +1,33 @@
+table{
+    background-color:#005a2d;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-image: linear-gradient(to right, #0ead3e 0%, #00271d 100%) 1;
+    border-width: 5px;
+    border-style: solid;
+    text-align: center; 
+  }
+  th, td{
+    padding: 15px;
+    border: 1px solid black;
+  }
+
+  a{
+    color:white;
+    text-decoration:none
+  }
+  a:hover {
+    color:rgb(128, 255, 0);
+  }
+  /*https://www.w3schools.com/html/html_tables.asp*/
+/*https://stackoverflow.com/questions/2717127/how-to-do-gradient-borders-in-css
+helped me create the border gradient*/
+
+/*https://www.w3schools.com/cssref/sel_hover.php
+I used this because it appeared in the image that the color could change to lime. 
+I assumed this was a cursor hover or clicking effect.*/
+
+/*https://www.w3schools.com/html/html_links.asp
+Used this for hyperlink color*/
+
+/*https://www.shecodes.io/athena/17496-how-to-remove-the-underline-of-a-link-in-css#:~:text=To%20remove%20the%20underline%20of%20a%20link%2C%20you%20can%20use,and%20set%20it%20to%20none%20.&text=This%20will%20remove%20the%20underline,line%2Dthrough%20%2C%20and%20blink%20.
+used this to get rid of hyperlink underline*/
