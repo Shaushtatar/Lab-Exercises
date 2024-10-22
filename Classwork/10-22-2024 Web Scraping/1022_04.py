@@ -8,6 +8,7 @@ import html5lib
 import csv
 
 title_dict = {} #we want all 10 pages in the same dictionary so we declare this before while loop
+#we could also make a list of dictionaries for each page, and mark our dictionary position wrt page we're scraping
 
 page = 1
 while page != 11:
@@ -21,3 +22,8 @@ while page != 11:
     page += 1
 
 print(title_dict)
+
+'''
+The project is going ok, we are still in a period of deciding what we would like to do which is hindering our progress.
+We still need all of our interviews, so we're gonna try and get those done ASAP.
+'''
