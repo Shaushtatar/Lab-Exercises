@@ -60,9 +60,8 @@ try:
     )
     actions.click(link).perform()
 
-    desc_block = WebDriverWait(driver, 5).until(
-    EC.presence_of_element_located(By.CLASS_NAME, "notes embedded-content")
-    )
+    desc_block = driver.find_element(By.CLASS_NAME, "notes embedded-content")
+    print(desc_block.find_element(By.TAG_NAME, "p"))
 
     '''
     all_links = driver.find_elements(By.CSS_SELECTOR, "h3 a")
