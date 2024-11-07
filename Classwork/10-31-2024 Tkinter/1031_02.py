@@ -3,7 +3,7 @@ import random
 import tkinter as tk
 
 root = tk.Tk()
-root.geometry("833x833")
+root.geometry("500x500")
 
 colors = ["red", "green", "blue",
          "orange", "yellow", "purple"]
