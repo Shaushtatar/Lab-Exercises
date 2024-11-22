@@ -5,7 +5,10 @@ root = tk.Tk()
 root.geometry("890x686")
 root.configure(background="white")
 root.title("Facebook")
-
+def destroy(event):
+    root.destroy()
+root.bind("<Escape>", destroy)
+#Helped with binding and event syntax https://python-course.eu/tkinter/events-and-binds-in-tkinter.php
 cal18bold = tkFont.Font(family = "Calibri", size = 18, weight = "bold")
 #Frames
 #===========================================================================================
@@ -32,7 +35,7 @@ imgbox.pack()
 editbox.pack()
 #*******************************************************************************************
 contacts = tk.Frame(body_right, background="white", width = 470, height = 218)
-dropdowns = tk.Frame(body_right, background="firebrick3", width = 470, height = 376)
+dropdowns = tk.Frame(body_right, background="white", width = 470, height = 376)
 contacts.pack()
 dropdowns.pack()
 #*******************************************************************************************
@@ -45,7 +48,7 @@ header_top = tk.Frame(header, background = "royalblue4", width = 730, height = 4
 header_bottom = tk.Frame(header, background = "royalblue2", width = 730, height = 28)
 header_top.pack()
 header_bottom.pack()
-#===========================================================================================
+#*******************************************************************************************
 logoframe = tk.Frame(header_top, width = 107, height = 40, background = "royalblue4")
 nonlogoframe = tk.Frame(header_top, width = 623, height = 40, background = "royalblue4")
 logoframe.pack(side = "left")
@@ -118,4 +121,50 @@ Profile = tk.Label(editbox, text = "Edit My Privacy", fg = "cornflower blue", ba
 Profile.place(x = 0, y = 80)
 Profile = tk.Label(editbox, text = "Create a Profile Badge", fg = "cornflower blue", background = "white")
 Profile.place(x = 0, y = 100)
+
+tk.Label(contacts, text = "Matt Cahill", font = cal18bold, fg = "royalblue4", background = "white").place(x = 0, y = 10)
+tk.Label(contacts, text = "Facebook", background = "white").place(x = 0, y = 40)
+tk.Label(contacts, text = "Iowa State Alum", background = "white").place(x = 0, y = 60)
+tk.Label(contacts, text = "Silicon Valley, CA", background = "white").place(x = 0, y = 80)
+
+tk.Label(contacts, text = "Email:", background = "white", fg = "grey").place(x = 0, y = 110)
+tk.Label(contacts, text = "AIM Screenname:", background = "white", fg = "grey").place(x = 0, y = 125)
+tk.Label(contacts, text = "Mobile:", background = "white", fg = "grey").place(x = 0, y = 140)
+tk.Label(contacts, text = "Sex:", background = "white", fg = "grey").place(x = 0, y = 165)
+tk.Label(contacts, text = "Interested In:", background = "white", fg = "grey").place(x = 0, y = 180)
+
+tk.Label(contacts, text = "mcahill@facebook.com", background = "white", fg = "black").place(x = 130, y = 110)
+tk.Label(contacts, text = "lacuna arcana", background = "white", fg = "royalblue4").place(x = 130, y = 125)
+tk.Label(contacts, text = "319.378.1965", background = "white", fg = "black").place(x = 130, y = 140)
+tk.Label(contacts, text = "Male", background = "white", fg = "royalblue4").place(x = 130, y = 165)
+tk.Label(contacts, text = "Women", background = "white", fg = "royalblue4").place(x = 130, y = 180)
+
+tk.Label(dropdowns, text = f"▶ Mini-Feed{space}{space}             ", background = "light steel blue", fg = "royalblue4").place(x = 0, y = 0)
+tk.Label(dropdowns, text = f"▼ Personal Info{space}{space}        ", background = "light steel blue", fg = "royalblue4").place(x = 0, y = 25)
+
+tk.Label(dropdowns, text = "Political Views:", background = "white", fg = "grey").place(x = 0, y = 55)
+tk.Label(dropdowns, text = "Interests:", background = "white", fg = "grey").place(x = 0, y = 75)
+
+tk.Label(dropdowns, text = "Favorite Music:", background = "white", fg = "grey").place(x = 0, y = 120)
+tk.Label(dropdowns, text = "Favorite TV Shows:", background = "white", fg = "grey").place(x = 0, y = 240)
+tk.Label(dropdowns, text = "Favorite Movies:", background = "white", fg = "grey").place(x = 0, y = 270)
+tk.Label(dropdowns, text = "Favorite Quotes:", background = "white", fg = "grey").place(x = 0, y = 345)
+
+tk.Label(dropdowns, text = "Moderate", background = "White", fg = "royalblue4").place(x = 130, y = 55)
+tk.Label(dropdowns, text = "Web Design, Photography, Almost All Music, Tennis, Nintendo DS Lite", background = "White", fg = "royalblue4", 
+         wraplength=300, justify = "left").place(x = 130, y = 75)
+tk.Label(dropdowns, text = "Zero 7, Air, Beatles, Imogen Heap, Acceptance, Coldplay, Massive Attack, Belle & Sebastian, Jurassic 5, Blackalicious, Björk, Scissor Sisters, Daft Punk, Theivery Corporation, BT, Beck, Wilco, Deathcab for Cutie, Utada Hikaru, Way Out West, Radiohead, The Streets, Cake, Chemical Brothers, Moby, Fischerspooner, High and Mighty Color",
+          background = "White", fg = "royalblue4", wraplength=300, justify = "left").place(x = 130, y = 120)
+tk.Label(dropdowns, text = "Lost, Family Guy, Firefly, Bleach, Battlestar Galactica", background = "White", fg = "royalblue4", 
+         wraplength=300, justify = "left").place(x = 130, y = 240)
+tk.Label(dropdowns, text = "Harold and Kumar Go to White Castle, The Incredibles, Zoolander, Kill Bill, Ferris Bueller's Day Off, Fight Club, Boondock Saints, Office Space, American Beauty, Stargate, Dogma, Super Troopers, Wayne's World, Ocean's Eleven, Primer", background = "White", fg = "royalblue4", 
+         wraplength=300, justify = "left").place(x = 130, y = 270)
+tk.Label(dropdowns, text = '"Drama is life with all of the dull bits cut out" -Alfred Hitchcock', background = "White", fg = "black", 
+         wraplength=300, justify = "left").place(x = 130, y = 345)
+#for justify https://stackoverflow.com/questions/37318060/how-to-justify-text-in-label-in-tkinter
+#tkinter wraplength https://www.tutorialspoint.com/python/tk_label.htm 
+
+
+
+
 root.mainloop()
